@@ -273,6 +273,16 @@
 
     <!-- CONFIGURAÇÕES -->
     <div id="settings" class="page">
+      
+      <!-- PAINEL SHAREPOINT NOVO -->
+      <div class="panel">
+        <h2><i class="fas fa-cloud-download-alt" style="color: var(--primary);"></i> Sincronização na Nuvem (SharePoint)</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); font-size: 15px;">Utilize a pasta compartilhada da equipe para baixar a base de dados (JSON) mais atualizada e Restaurar no sistema, ou exporte o seu Backup e guarde nesta pasta.</p>
+        <a href="https://essentra-my.sharepoint.com/:f:/p/filipegodoi/IgDU5zXVlPWUSJaQTW5FmxokAWVKXcyOrfkANJ70RS-JNnE?e=1mi2Ty" target="_blank" class="btn info" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fas fa-external-link-alt"></i> Abrir Pasta Compartilhada
+        </a>
+      </div>
+
       <div class="panel">
         <h2><i class="fas fa-cogs"></i> Configurações de Campos</h2>
         <p style="margin-bottom: 20px; color: var(--text-muted);">Defina os campos do formulário.</p>
@@ -381,7 +391,6 @@
         document.getElementById('emailAttachmentIndicator').style.display = 'flex';
         document.getElementById('emailAttachmentName').textContent = file.name;
         
-        // Arquivos do Outlook (.msg) são bloqueados pelo navegador para leitura de texto interno.
         if (isMsgFile) {
             showMessage(`E-mail anexado! (Para extrair os campos, cole (Ctrl+V) o texto do e-mail ou o print na tela).`, 'info');
         } else {
